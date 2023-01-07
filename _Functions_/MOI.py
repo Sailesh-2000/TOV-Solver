@@ -67,7 +67,7 @@ class MOI_SOLVER:
 
         diff= W_R_bc-W_R
 
-        I_bar= I_R/(M**3)
+        I_bar= I_R/(M*R**2)
         M= M*(1/Kg__to__m)*(1/M0)
         I= I_R/Kg__to__m
 

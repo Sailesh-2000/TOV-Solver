@@ -9,7 +9,7 @@ def EOS_Data(path):
     e= Data[:,1]*Mev_per_fm_cube__to__Pa*Pa__to__per_m_square
     p= Data[:,2]*Mev_per_fm_cube__to__Pa*Pa__to__per_m_square
     
-    Data= [e,p]
+    Data= [Data[:,1],Data[:,2]]
 
     min_p= np.min(p)
     max_p= np.max(p)
@@ -24,18 +24,3 @@ def EOS_Data(path):
     EOS= P2E, E2P
     
     return Data, CP, EOS
-
-def Multiple_EOS(path_array):
-    
-    Data_store= []
-    CP_store= []
-    EOS_store= []
-    
-    for i in path_array:
-        Data, CP, EOS= EOS_Data(i)
-        
-        Data_store.append(Data)
-        CP_store.append(CP)
-        EOS_store.append(EOS)
-    
-    return Data_store, CP_store, EOS_store
