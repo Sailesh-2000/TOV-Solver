@@ -1,22 +1,13 @@
 # TOV_SOLVER (MOI+TIDAL DEFORMABILITY)
  
- This program calculates the radial pressure pr and total mass m as a function
-of radius r in a spherically symmetric, static sphere, in the context of
-general relativity. The ODE for the pressure is known as the
-Tolman-Oppenheimer-Volkoff (TOV) equation, and the ODE for the
-mass-energy comes from performing the Leibniz integral rule on the
-definition of m(r) during the TOV derivation. (This is shown in pretty
-much every GR book.)
-
-The TOV equation + mass-energy equation lead to 2 ODEs --- one for
-m(r) and the other for p(r) --- but in these equations we have a third
-variable, the energy density e(r). Thus we close the system by
-providing e(r) and an equation of state (EOS). Currently this program
-can use only tabulated EOS data. The required form of
-such data is:
+This program computes the M-R profile, Moment of Inertia for slowly rotating star, and Tidal Deformability Parameters. M-R profile is obtained by solving the TOV equation with a given EOS. The EOS must have 3 coloumns with the following data:
 
 1.) baryon number density in units of fm^-3 (currently unused) \
 2.) energy density in units of Mev/fm^3 \
 3.) pressure in units of Mev/fm^3 
 
-NS Parameters for maximum and canonical mass is tabulated at the end.
+MI is computed by numerically integrating two CDEs obtained from solving Hartle-Throne metric in Einstein field equation. \bar{I} represents the dimensionless moment of inertia ($I/MR^2$). Tidal deformability is computed numerically integrating two CDEs obtained from solving Thorne and Campolattar metric in perturbed Einstein field equation. Radial profile data of mass, pressure, metric function obtained by solving tov is used for calculation of MI and Tidal deformability.
+
+## How to run the programm for your specific tabulated EOS?
+
+Copy & paste your EOS.dat/txt file in the EOS folder. Open TOV_Solver.ipynb. Write the name of your EOS in the path section "Your_Eos.dat". As this code uses multiprocessing for faster computation, assign the values of nc and nc_MR according to no. of cores in your system. Note: nc*designated_cores must be around 70. Once everything is set run the whole programm and you will get the NS Parameters for maximum and canonical mass in tabulated form at the end.
