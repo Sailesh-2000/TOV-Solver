@@ -53,7 +53,7 @@ class TOV_SOLVER:
         min_p,max_p,min_e,max_e= self.CP
             
         e0= eo*Mev_per_fm_cube__to__Pa*Pa__to__per_m_square
-        rmax = 20000
+        rmax = 30000
         r0 = 0.01
         psi_0 = 1
 
