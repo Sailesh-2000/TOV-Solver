@@ -13,8 +13,8 @@ MI is computed by numerically integrating two CDEs obtained from solving Hartle-
 Copy & paste your EOS.dat/txt file in the EOS folder. Open TOV_Solver.ipynb. Write the name of your EOS in the path section "Your_Eos.dat". As this code uses multiprocessing for faster computation, assign the values of nc and nc_MR according to no. of cores in your system. Note: (nc * designated_cores) must be around 70. Once everything is set run the whole programme and you will get the NS Parameters along with for parameters for maximum and canonical mass in tabulated form at the end.
 
 ## Plots:
-![MR-profile](https://user-images.githubusercontent.com/105746092/214935216-a0ec73f3-b32a-441a-b673-e82e4c4997b8.png) \
-![Density-profile](https://user-images.githubusercontent.com/105746092/214935201-bad50352-fa86-4d3c-bf0a-4d04580010a6.png) \
-![mass-pressure-sound_speed-profile](https://user-images.githubusercontent.com/105746092/214935207-734dc4f7-8203-44be-b415-b5ab2bd8de7f.png) \
-![MI](https://user-images.githubusercontent.com/105746092/214935212-be363251-f820-437a-9346-4d46745d8c64.png) \
-![Tidal_Deformability](https://user-images.githubusercontent.com/105746092/214935223-0e7e2103-db25-48f9-a155-71ee2b08f058.png)
+![MR-profile](https://user-images.githubusercontent.com/105746092/214937251-4e30b9e3-af26-4375-b031-91913fc3f208.png) \ 
+![Density-profile](https://user-images.githubusercontent.com/105746092/214937235-41347712-cd3b-4568-8084-cb0698947cd0.png) \
+![mass-pressure-sound_speed-profile](https://user-images.githubusercontent.com/105746092/214937242-4300ca58-382f-45b7-99fe-36261be7012f.png) \
+![MI](https://user-images.githubusercontent.com/105746092/214937248-bb7241aa-03af-4b3a-9264-99379093ac0f.png) \
+![Tidal_Deformability](https://user-images.githubusercontent.com/105746092/214937253-c1f24548-0c02-4715-8b82-c53981380d66.png)
