@@ -5,9 +5,10 @@ from .Metric_Functions import *
 from .Config import *
 
 class TOV_SOLVER:
-    def __init__(self,EOS,CP):
+    def __init__(self,EOS,CP,rad_end=None):
         self.EOS= EOS
         self.CP= CP
+        self.rad_end=rad_end
 
     def TOV(self,y,r):
         pr, m = y
@@ -69,9 +70,14 @@ class TOV_SOLVER:
         rlist = [r0]
         psilist = [psi_0]
 
+        if self.rad_end == None:
+            bc_p=min_p
+        else:
+            bc_p=pr0*self.rad_end
+
         for ri in np.arange(r0+h, rmax, h):
             yi, psi_i = self.TOV_RK4(yi,psi_i,ri,h)
-            if yi[0] < min_p:
+            if yi[0] < bc_p:
                 break
 
             rlist.append(ri)
